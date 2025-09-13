@@ -1,0 +1,10 @@
+docker exec -it mysql mysql -u root -p
+root
+
+CREATE DATABASE lamtt14;
+
+SHOW DATABASES;
+
+USE lamtt14;
+
+# use GUI to import .csv faster than cmd

@@ -1,0 +1,18 @@
+docker exec -it cassandra cqlsh
+
+# create table
+
+CREATE TABLE cycling.tracking ( create_time timeuuid PRIMARY KEY , bid double, bn text , campaign_id double, cd double, custom_track text, de text
+,dl text,dt text,ed text,ev double,group_id double,id double,job_id double,md text,publisher_id double ,rl text,sr text ,ts timestamp ,tz double,ua text,uid text,utm_campaign text,utm_content text,utm_medium text,
+utm_source text,utm_term text,v text,vp text );
+
+# insert
+
+COPY cycling.tracking (
+    create_time, bid, bn, campaign_id, cd, custom_track, de, dl, dt, ed,
+    ev, group_id, id, job_id, md, publisher_id, rl, sr, ts, tz,
+    ua, uid, utm_campaign, utm_content, utm_medium, utm_source,
+    utm_term, v, vp
+)
+FROM '/csv-data/cassandra/tracking.csv'
+WITH HEADER = TRUE AND DELIMITER = ';';

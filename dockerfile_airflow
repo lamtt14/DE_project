@@ -1,0 +1,18 @@
+# Dockerfile: extend airflow image with Java 17
+FROM apache/airflow:3.0.4
+
+USER root
+
+#
+#RUN apt-get update && apt-get install -y bash
+
+# Cài OpenJDK 17
+RUN apt-get update && \
+    apt-get install -y openjdk-17-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
+# Thiết lập JAVA_HOME và PATH
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
+USER airflow
