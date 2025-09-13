@@ -90,4 +90,4 @@ The data pipeline architecture using a simple timestamp-based CDC to recognize t
 SparkSubmitOperator, BranchPythonOperator, PythonOperator are used for execution and are set to run every day at 6 AM
 
 ### Challenge: Visualization with PowerBI/Grafana
-The scope of this project was focused on building the data pipeline and implementing data processing workflows. It did not cover data analysis or insight generation. For deeper exploration and interpretation, visualization tools can be employed to perform advanced analysis.
+The scope of this project was focused on building the data pipeline and implementing data processing workflows. It did not cover data analysis or insight generation. For deeper exploration and interpretation, visualization tools can be employed to perform advanced analysiss.
